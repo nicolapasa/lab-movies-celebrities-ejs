@@ -1,0 +1,16 @@
+<h1>Update Celebrity</h1>
+
+    <% let url='/celebrities/'+celebrity._id+'/edit' %>
+ 
+
+<form action="<%-url%>" method="post" class="d-flex flex-column">
+
+  <input type="text" name="name" class="form-control" placeholder="name of the celebrity" value="<%- celebrity.name  %>">
+  <input type="text" name="occupation" class="form-control"  placeholder="the occupation" value="<%-celebrity.occupation%>">
+  <textarea name="catchPhrase" class="form-control"   placeholder="the catch phrase"><%-celebrity.catchPhrase%></textarea>
+  <input type="text" name="picture"  class="form-control"  placeholder="picture" value="<%-celebrity.picture%>">
+  <button type="submit" class="btn btn-primary">Update</button>
+
+
+
+</form>

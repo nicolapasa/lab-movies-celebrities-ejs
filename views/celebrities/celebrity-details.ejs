@@ -1,0 +1,29 @@
+<div class="d-flex m-2">
+    <div class="p-2">
+        <h1>
+
+            <%-celebrity.name %>
+        
+        </h1>
+        <h2>
+            <%-celebrity.occupation %>
+        </h2>
+        <p>
+            <%-celebrity.catchPhrase %>
+        </p>
+        <div class="d-flex m-2">
+            <a  class="btn btn-primary mr-2"   href="/celebrities/<%- celebrity._id %>/edit">EDIT</a>
+            <form action="/celebrities/<%- celebrity._id %>/delete" method="post">
+                <button class="btn btn-danger" type="submit">DELETE</button>
+            </form>
+        </div>
+    
+    </div>
+    <div class="p-2">
+        <img class="img-responsive" src="<%- celebrity.picture?  celebrity.picture: 'https://placehold.co/400' %>" alt="Card image cap">
+     
+    </div>
+    
+
+</div>
+

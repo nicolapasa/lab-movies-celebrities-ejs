@@ -1,0 +1,22 @@
+<h1><%- movie.title %></h1>
+
+<img  src="<%- movie.picture?  movie.picture: 'https://placehold.co/400' %>" alt="Card image cap">
+  
+<h2>Genre: <%- movie.genre %></h2>
+
+<p>
+    <%- movie.plot %>
+</p>
+
+<h3>Cast:</h3>
+<ul>
+    <% movie.cast.forEach(actor => { %>
+      <li><%- actor %></li>
+    <% }) %>
+</ul>
+<div class="d-flex">
+    <a  class="btn btn-primary mr-2"   href="/movies/<%- movie._id %>/edit">EDIT</a>
+    <form action="/movies/<%- movie._id %>/delete" method="post">
+        <button class="btn btn-danger" type="submit">DELETE</button>
+    </form>
+</div>

@@ -1,0 +1,20 @@
+<h1>All Movies</h1>
+
+<a href="/movies/create" class="btn btn-primary">new movie</a>
+<div class="row">
+
+
+
+<% allMovie.forEach(movie => { %>
+  <div class="card col m-2" style="width: 18rem;">
+    <img class="card-img-top" src="<%- movie.picture?  movie.picture: 'https://placehold.co/400' %>" alt="Card image cap">
+    <div class="card-body">
+      <h2><%- movie.title %></h2>   
+      <a class="btn btn-primary" href="/movies/<%= movie._id %>">movie details</a>
+    </div>
+  </div>
+ 
+      
+<% }) %>
+
+</div>

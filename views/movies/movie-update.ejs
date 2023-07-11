@@ -1,0 +1,26 @@
+<h1>update movie</h1>
+
+
+    <% let url='/movies/'+movie._id+'/edit' %>
+ 
+
+<form action="<%-url %>" method="post" class="d-flex flex-column">
+
+    <input type="text" name="title" class="form-control" value="<%- movie.title %>" placeholder="title">
+    <input type="text" name="genre" class="form-control" value="<%- movie.genre %>" placeholder="the genre">
+    <textarea  name="plot" class="form-control"><%- movie.plot %>" </textarea>
+    
+
+    <select name="cast" class="form-control"  multiple>
+        <% allCelebrities.forEach(celebrity => { %> 
+            <option value="<%- celebrity.name %>" <%-  movie.cast.includes(celebrity.name) ?  'selected': ''  %>  ><%- celebrity.name %></option>
+        <% }) %>
+
+     
+      </select>
+      <input type="text" name="picture" class="form-control"  placeholder="picture" value="<%- movie.picture%>" >
+    <button type="submit" class="btn btn-primary">Create</button>
+  
+  
+  
+  </form>

@@ -1,0 +1,16 @@
+<h1>all celebrities</h1>
+
+<a class="btn btn-primary" href="/celebrities/create">new celebrity</a>
+<div class="row">
+  <% allCelebrities.forEach(celebrity => { %>
+    <div class="card col m-2" style="width: 18rem;">
+      <img class="card-img-top" src="<%- celebrity.picture?  celebrity.picture: 'https://placehold.co/400' %>" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%- celebrity.name %></h5>
+        <p class="card-text"><%- celebrity.occupation %></p>
+        <a href="/celebrities/<%- celebrity._id %>" class="btn btn-primary">details</a>
+      </div>
+    </div>
+   
+<% }) %>
+</div>

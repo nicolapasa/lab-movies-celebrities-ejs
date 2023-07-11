@@ -1,0 +1,15 @@
+<h1>new celebrities</h1>
+<% let url='/celebrities/create' %>
+
+
+<form action="<%-url%>" method="post" class="d-flex flex-column">
+
+  <input type="text" class="form-control" name="name" placeholder="name of the celebrity"   >
+  <input type="text" class="form-control" name="occupation"  placeholder="the occupation" >
+  <textarea class="form-control" name="catchPhrase"   placeholder="the catch phrase"></textarea>
+  <input class="form-control" type="text" name="picture"   placeholder="picture" >
+  <button type="submit" class="btn btn-primary">Create</button>
+
+
+
+</form>
